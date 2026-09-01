@@ -6,7 +6,7 @@ Wants=network-online.target
 [Service]
 Type=simple
 WorkingDirectory=/opt/warehouse-recorder
-ExecStart=/opt/warehouse-recorder/venv/bin/python /opt/warehouse-recorder/record.py
+ExecStart=/opt/warehouse-recorder/venv/bin/python /opt/warehouse-recorder/record.py --loop
 Restart=on-failure
 RestartSec=30
 User=recorder
