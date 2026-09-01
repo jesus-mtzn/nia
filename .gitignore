@@ -1,0 +1,16 @@
+# credentials — never commit these
+storage_state.json
+auth_state.json
+
+# recorded footage — stays local/on the drive, not in git
+*.mp4
+*.webm
+segments/
+test_clips/
+debug_screenshots/
+
+# python/mac noise
+venv/
+__pycache__/
+*.pyc
+.DS_Store

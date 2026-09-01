@@ -1,0 +1,15 @@
+[Unit]
+Description=Warehouse Area de Carga 24/7 recorder
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+WorkingDirectory=/opt/warehouse-recorder
+ExecStart=/opt/warehouse-recorder/venv/bin/python /opt/warehouse-recorder/record.py
+Restart=on-failure
+RestartSec=30
+User=recorder
+
+[Install]
+WantedBy=multi-user.target
